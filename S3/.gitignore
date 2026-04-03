@@ -28,7 +28,9 @@ override.tf.json
 
 *.tfplan
 myPlan
-
+myPlan.tfplan
+plan.out
+tfplan
 # Ignore CLI configuration files
 
 .terraformrc
