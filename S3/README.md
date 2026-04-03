@@ -148,6 +148,17 @@ aws s3 ls
 ```
 
 ---
+## 🗄️Create Backend S3 Bucket (IMPORTANT)
+
+### Signature Expired Error
+
+```bash id="h7i8j9"
+Terraform will NOT create backend automatically.
+
+aws s3 mb s3://terraform-backend-state-bucket-tff --region ap-south-1
+```
+
+---
 
 ## 🔒 Best Practices
 
@@ -164,21 +175,15 @@ aws s3 ls
 
 ---
 
-## ❗ Troubleshooting
-
-### Signature Expired Error
-
-```bash id="h7i8j9"
-w32tm /resync
-```
-
----
 
 ## 📌 Notes
 
 * Bucket name is **globally unique** due to random suffix
 * Region: `ap-south-1`
 * Ensure IAM user has S3 permissions
+* Backend bucket must exist before terraform init
+* Bucket name must be globally unique
+* Region: ap-south-1
 
 ---
 
