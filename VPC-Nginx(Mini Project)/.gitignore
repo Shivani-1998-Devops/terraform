@@ -1,0 +1,30 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Crash log
+crash.log
+
+# Ignore local CLI config
+.terraformrc
+terraform.rc
+
+# Ignore sensitive override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration directories
+.terraform.d/
+
+# Ignore generated plan files
+*.tfplan
+
+# Ignore editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
