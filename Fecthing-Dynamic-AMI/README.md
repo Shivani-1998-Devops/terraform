@@ -6,8 +6,9 @@ This Terraform project demonstrates how to dynamically fetch the latest Ubuntu 2
 
 The project consists of the following components:
 - `ami.tf`: Defines a data source to fetch the most recent Ubuntu 22.04 AMI
+- `data.tf`: Defines data sources for AWS caller identity, default VPC, and default subnets
 - `ec2.tf`: Creates an AWS EC2 instance using the fetched AMI
-- `output.tf`: Outputs the AMI data for reference
+- `output.tf`: Outputs the AMI data, caller identity, default VPC, and subnet information
 - `provider.tf`: Configures the AWS provider
 - `terraform.tf`: Specifies Terraform and provider version requirements
 
@@ -56,6 +57,9 @@ The project is configured to:
 ## Outputs
 
 - `ubuntu_ami_data`: Details of the fetched Ubuntu AMI
+- `caller_identity`: Information about the AWS account and user running Terraform
+- `default_vpc`: Details of the default VPC in the region
+- `default_subnets`: List of default subnets in the default VPC
 
 ## Notes
 
